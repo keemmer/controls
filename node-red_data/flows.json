@@ -1,0 +1,308 @@
+[
+    {
+        "id": "9c07c13a2f0deae3",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4bacb4b98508af55",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "rabbitmq",
+        "port": "1883",
+        "clientid": "node-red-client-00000001",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "93fcfe4b7dd8df0e",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "sensors",
+        "name": "influx_01",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": "10",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "0f4dee41f6a41c4a",
+        "type": "mqtt in",
+        "z": "9c07c13a2f0deae3",
+        "name": "",
+        "topic": "test",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4bacb4b98508af55",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "fac6e09d9dcf8a76"
+            ]
+        ]
+    },
+    {
+        "id": "fac6e09d9dcf8a76",
+        "type": "debug",
+        "z": "9c07c13a2f0deae3",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8f74c9f442ebd6f5",
+        "type": "mqtt out",
+        "z": "9c07c13a2f0deae3",
+        "name": "",
+        "topic": "test",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4bacb4b98508af55",
+        "x": 610,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "89a8562b70dab4b2",
+        "type": "inject",
+        "z": "9c07c13a2f0deae3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "b5b0d76c7ffab5c7"
+            ]
+        ]
+    },
+    {
+        "id": "b5b0d76c7ffab5c7",
+        "type": "function",
+        "z": "9c07c13a2f0deae3",
+        "name": "function 1",
+        "func": "msg.payload = {\n    deviceId: \"123\",\n    status: \"ON\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "8f74c9f442ebd6f5"
+            ]
+        ]
+    },
+    {
+        "id": "0bfd43423804acfb",
+        "type": "inject",
+        "z": "9c07c13a2f0deae3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "b36dd90eefdfaa08"
+            ]
+        ]
+    },
+    {
+        "id": "b36dd90eefdfaa08",
+        "type": "function",
+        "z": "9c07c13a2f0deae3",
+        "name": "function 2",
+        "func": "msg.payload = {\n  temperature: Math.floor(Math.random() * 51),\n  tags: {\n    location: \"office\"\n  },\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 460,
+        "wires": [
+            [
+                "fd8dafd28c1ad8cb",
+                "95d5b5b8db26aa0a"
+            ]
+        ]
+    },
+    {
+        "id": "fd8dafd28c1ad8cb",
+        "type": "influxdb out",
+        "z": "9c07c13a2f0deae3",
+        "influxdb": "93fcfe4b7dd8df0e",
+        "name": "",
+        "measurement": "temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "myorg",
+        "bucket": "mybucket",
+        "x": 720,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "95d5b5b8db26aa0a",
+        "type": "debug",
+        "z": "9c07c13a2f0deae3",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "28266240a97ee0af",
+        "type": "influxdb in",
+        "z": "9c07c13a2f0deae3",
+        "influxdb": "93fcfe4b7dd8df0e",
+        "name": "",
+        "query": "from(bucket: \"mybucket\")\n  |> range(start: -24h)\n  |> filter(fn: (r) => r._measurement == \"temperature\")",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "myorg",
+        "x": 460,
+        "y": 620,
+        "wires": [
+            [
+                "075ac9e05ee1f31c"
+            ]
+        ]
+    },
+    {
+        "id": "8848f65c99e62b58",
+        "type": "inject",
+        "z": "9c07c13a2f0deae3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "28266240a97ee0af"
+            ]
+        ]
+    },
+    {
+        "id": "075ac9e05ee1f31c",
+        "type": "debug",
+        "z": "9c07c13a2f0deae3",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 620,
+        "wires": []
+    }
+]

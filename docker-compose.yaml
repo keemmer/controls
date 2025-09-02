@@ -1,0 +1,71 @@
+version: "3.8"
+services:
+  portainer:
+    image: portainer/portainer:latest
+    container_name: portainer
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - "./portainer_data:/data"
+    environment:
+      TZ: Asia/Bangkok
+    restart: always
+  node-red:
+    image: nodered/node-red
+    container_name: nodered
+    environment:
+      TZ: Asia/Bangkok
+    ports:
+      - 1880:1880
+    volumes:
+      - ./node-red_data:/data
+    restart: always
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "4000:3000"
+    environment:
+      - TZ=Asia/Bangkok
+      - GF_SECURITY_ADMIN_PASSWORD=buncha.pi0
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+    restart: always
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      - TZ=Asia/Bangkok
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=keemmer
+      - DOCKER_INFLUXDB_INIT_PASSWORD=buncha.pi0
+      - DOCKER_INFLUXDB_INIT_ORG=myorg
+      - DOCKER_INFLUXDB_INIT_BUCKET=mybucket
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=mysecrettoken123
+    volumes:
+      - ./influxdb-data:/var/lib/influxdb
+    restart: always
+  rabbitmq:
+    image: "rabbitmq:management"
+    container_name: rabbitmq
+    ports:
+      - 5672:5672      # AMQP
+      - 15672:15672    # Management UI
+      - 1883:1883      # MQTT over TCP
+      - 15675:15675    # MQTT over WebSocket (from rabbitmq_web_mqtt)
+    environment:
+      - RABBITMQ_DEFAULT_USER=keemmer
+      - RABBITMQ_DEFAULT_PASS=buncha.pi0 # Change this password
+      - RABBITMQ_PLUGINS=rabbitmq_mqtt
+    volumes:
+      - ./rabbitmq-data:/var/lib/rabbitmq
+      - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf # config file
+      - ./enabled_plugins:/etc/rabbitmq/enabled_plugins # plugin enabled file
+    restart: always
+networks:
+  default:
+    external:
+      name: iot_home_19

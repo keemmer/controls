@@ -1,0 +1,461 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.2
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 0ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 warn config production Use `--omit=dev` instead.
+8 timing config:load:cli Completed in 1ms
+9 timing config:load:env Completed in 0ms
+10 timing config:load:file:/data/.npmrc Completed in 0ms
+11 timing config:load:project Completed in 3ms
+12 timing config:load:file:/usr/src/node-red/.npmrc Completed in 1ms
+13 timing config:load:user Completed in 1ms
+14 timing config:load:file:/usr/local/etc/npmrc Completed in 0ms
+15 timing config:load:global Completed in 0ms
+16 timing config:load:validate Completed in 0ms
+17 timing config:load:credentials Completed in 1ms
+18 timing config:load:setEnvs Completed in 0ms
+19 timing config:load Completed in 7ms
+20 timing npm:load:configload Completed in 7ms
+21 timing npm:load:mkdirpcache Completed in 1ms
+22 timing npm:load:mkdirplogs Completed in 0ms
+23 verbose title npm install node-red-iot-mqtt-api@1.0.1
+24 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--production" "--engine-strict" "node-red-iot-mqtt-api@1.0.1"
+25 timing npm:load:setTitle Completed in 1ms
+26 timing config:load:flatten Completed in 1ms
+27 timing npm:load:display Completed in 1ms
+28 verbose logfile logs-max:10 dir:/data/.npm/_logs
+29 verbose logfile /data/.npm/_logs/2025-07-16T02_08_49_788Z-debug-0.log
+30 timing npm:load:logFile Completed in 6ms
+31 timing npm:load:timers Completed in 0ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 16ms
+34 timing arborist:ctor Completed in 1ms
+35 silly logfile done cleaning log files
+36 timing arborist:ctor Completed in 0ms
+37 timing idealTree:init Completed in 6ms
+38 timing idealTree:userRequests Completed in 2ms
+39 silly idealTree buildDeps
+40 silly fetch manifest node-red-iot-mqtt-api@1.0.1
+41 http fetch GET 200 https://registry.npmjs.org/node-red-iot-mqtt-api 1150ms (cache miss)
+42 silly placeDep ROOT node-red-iot-mqtt-api@1.0.1 OK for: node-red-project@0.0.1 want: 1.0.1
+43 silly fetch manifest mqtt@4.3.7
+44 silly fetch manifest is-utf8@0.2.1
+45 silly fetch manifest https-proxy-agent@5.0.1
+46 http fetch GET 200 https://registry.npmjs.org/mqtt 164ms (cache miss)
+47 http fetch GET 200 https://registry.npmjs.org/is-utf8 181ms (cache miss)
+48 http fetch GET 200 https://registry.npmjs.org/https-proxy-agent 192ms (cache miss)
+49 timing idealTree:#root Completed in 1356ms
+50 silly placeDep ROOT https-proxy-agent@5.0.1 OK for: node-red-iot-mqtt-api@1.0.1 want: 5.0.1
+51 silly placeDep ROOT is-utf8@0.2.1 OK for: node-red-iot-mqtt-api@1.0.1 want: 0.2.1
+52 silly placeDep ROOT mqtt@4.3.7 OK for: node-red-iot-mqtt-api@1.0.1 want: 4.3.7
+53 silly fetch manifest debug@4
+54 silly fetch manifest agent-base@6
+55 silly fetch manifest ws@^7.5.5
+56 silly fetch manifest pump@^3.0.0
+57 silly fetch manifest rfdc@^1.3.0
+58 silly fetch manifest debug@^4.1.1
+59 silly fetch manifest xtend@^4.0.2
+60 silly fetch manifest split2@^3.1.0
+61 silly fetch manifest commist@^1.0.0
+62 silly fetch manifest help-me@^3.0.0
+63 silly fetch manifest inherits@^2.0.3
+64 silly fetch manifest minimist@^1.2.5
+65 silly fetch manifest duplexify@^4.1.1
+66 silly fetch manifest lru-cache@^6.0.0
+67 silly fetch manifest reinterval@^1.1.0
+68 silly fetch manifest mqtt-packet@^6.8.0
+69 silly fetch manifest concat-stream@^2.0.0
+70 silly fetch manifest readable-stream@^3.6.0
+71 silly fetch manifest number-allocator@^1.0.9
+72 http fetch GET 200 https://registry.npmjs.org/debug 33ms (cache hit)
+73 http fetch GET 200 https://registry.npmjs.org/debug 31ms (cache hit)
+74 http fetch GET 200 https://registry.npmjs.org/ws 33ms (cache hit)
+75 http fetch GET 200 https://registry.npmjs.org/inherits 26ms (cache hit)
+76 http fetch GET 200 https://registry.npmjs.org/rfdc 98ms (cache miss)
+77 http fetch GET 200 https://registry.npmjs.org/pump 102ms (cache miss)
+78 http fetch GET 200 https://registry.npmjs.org/agent-base 107ms (cache miss)
+79 http fetch GET 200 https://registry.npmjs.org/concat-stream 223ms (cache miss)
+80 http fetch GET 200 https://registry.npmjs.org/minimist 226ms (cache miss)
+81 http fetch GET 200 https://registry.npmjs.org/lru-cache 246ms (cache miss)
+82 http fetch GET 200 https://registry.npmjs.org/help-me 262ms (cache miss)
+83 http fetch GET 200 https://registry.npmjs.org/xtend 266ms (cache miss)
+84 http fetch GET 200 https://registry.npmjs.org/split2 270ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/commist 271ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/duplexify 267ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/number-allocator 267ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/readable-stream 270ms (cache miss)
+89 http fetch GET 200 https://registry.npmjs.org/reinterval 994ms (cache miss)
+90 http fetch GET 200 https://registry.npmjs.org/mqtt-packet 1006ms (cache miss)
+91 timing idealTree:node_modules/node-red-iot-mqtt-api Completed in 1025ms
+92 silly placeDep ROOT agent-base@6.0.2 OK for: https-proxy-agent@5.0.1 want: 6
+93 silly placeDep ROOT debug@4.4.1 OK for: https-proxy-agent@5.0.1 want: 4
+94 silly fetch manifest ms@^2.1.3
+95 http fetch GET 200 https://registry.npmjs.org/ms 6ms (cache hit)
+96 timing idealTree:node_modules/https-proxy-agent Completed in 12ms
+97 timing idealTree:node_modules/agent-base Completed in 0ms
+98 silly placeDep ROOT ms@2.1.3 OK for: debug@4.4.1 want: ^2.1.3
+99 timing idealTree:node_modules/debug Completed in 2ms
+100 timing idealTree:node_modules/is-utf8 Completed in 0ms
+101 silly fetch manifest bufferutil@^4.0.1
+102 http fetch GET 200 https://registry.npmjs.org/bufferutil 5ms (cache hit)
+103 silly fetch manifest utf-8-validate@^5.0.2
+104 http fetch GET 200 https://registry.npmjs.org/utf-8-validate 6ms (cache hit)
+105 silly placeDep ROOT commist@1.1.0 OK for: mqtt@4.3.7 want: ^1.0.0
+106 silly placeDep ROOT concat-stream@2.0.0 OK for: mqtt@4.3.7 want: ^2.0.0
+107 silly placeDep ROOT duplexify@4.1.3 OK for: mqtt@4.3.7 want: ^4.1.1
+108 silly placeDep ROOT help-me@3.0.0 OK for: mqtt@4.3.7 want: ^3.0.0
+109 silly placeDep ROOT inherits@2.0.4 OK for: mqtt@4.3.7 want: ^2.0.3
+110 silly placeDep ROOT lru-cache@6.0.0 OK for: mqtt@4.3.7 want: ^6.0.0
+111 silly placeDep ROOT minimist@1.2.8 OK for: mqtt@4.3.7 want: ^1.2.5
+112 silly placeDep ROOT mqtt-packet@6.10.0 OK for: mqtt@4.3.7 want: ^6.8.0
+113 silly placeDep ROOT number-allocator@1.0.14 OK for: mqtt@4.3.7 want: ^1.0.9
+114 silly placeDep ROOT pump@3.0.3 OK for: mqtt@4.3.7 want: ^3.0.0
+115 silly placeDep ROOT readable-stream@3.6.2 OK for: mqtt@4.3.7 want: ^3.6.0
+116 silly placeDep ROOT reinterval@1.1.0 OK for: mqtt@4.3.7 want: ^1.1.0
+117 silly placeDep ROOT rfdc@1.4.1 OK for: mqtt@4.3.7 want: ^1.3.0
+118 silly placeDep ROOT split2@3.2.2 OK for: mqtt@4.3.7 want: ^3.1.0
+119 silly placeDep ROOT ws@7.5.10 OK for: mqtt@4.3.7 want: ^7.5.5
+120 silly placeDep ROOT xtend@4.0.2 OK for: mqtt@4.3.7 want: ^4.0.2
+121 silly fetch manifest leven@^2.1.0
+122 silly fetch manifest buffer-from@^1.0.0
+123 silly fetch manifest typedarray@^0.0.6
+124 silly fetch manifest end-of-stream@^1.4.1
+125 silly fetch manifest stream-shift@^1.0.2
+126 silly fetch manifest glob@^7.1.6
+127 silly fetch manifest yallist@^4.0.0
+128 silly fetch manifest bl@^4.0.2
+129 silly fetch manifest process-nextick-args@^2.0.1
+130 silly fetch manifest js-sdsl@4.3.0
+131 silly fetch manifest end-of-stream@^1.1.0
+132 silly fetch manifest once@^1.3.1
+133 silly fetch manifest string_decoder@^1.1.1
+134 silly fetch manifest util-deprecate@^1.0.1
+135 http fetch GET 200 https://registry.npmjs.org/once 8ms (cache hit)
+136 http fetch GET 200 https://registry.npmjs.org/buffer-from 83ms (cache miss)
+137 http fetch GET 200 https://registry.npmjs.org/yallist 80ms (cache miss)
+138 http fetch GET 200 https://registry.npmjs.org/typedarray 88ms (cache miss)
+139 http fetch GET 200 https://registry.npmjs.org/leven 100ms (cache miss)
+140 http fetch GET 200 https://registry.npmjs.org/end-of-stream 127ms (cache miss)
+141 http fetch GET 200 https://registry.npmjs.org/process-nextick-args 127ms (cache miss)
+142 http fetch GET 200 https://registry.npmjs.org/stream-shift 131ms (cache miss)
+143 http fetch GET 200 https://registry.npmjs.org/glob 132ms (cache miss)
+144 http fetch GET 200 https://registry.npmjs.org/end-of-stream 135ms (cache miss)
+145 http fetch GET 200 https://registry.npmjs.org/util-deprecate 135ms (cache miss)
+146 http fetch GET 200 https://registry.npmjs.org/bl 167ms (cache miss)
+147 http fetch GET 200 https://registry.npmjs.org/js-sdsl 174ms (cache miss)
+148 http fetch GET 200 https://registry.npmjs.org/string_decoder 846ms (cache miss)
+149 timing idealTree:node_modules/mqtt Completed in 881ms
+150 silly placeDep ROOT leven@2.1.0 OK for: commist@1.1.0 want: ^2.1.0
+151 timing idealTree:node_modules/commist Completed in 4ms
+152 silly placeDep ROOT buffer-from@1.1.2 OK for: concat-stream@2.0.0 want: ^1.0.0
+153 silly placeDep ROOT typedarray@0.0.6 OK for: concat-stream@2.0.0 want: ^0.0.6
+154 timing idealTree:node_modules/concat-stream Completed in 3ms
+155 timing idealTree:node_modules/buffer-from Completed in 0ms
+156 silly placeDep ROOT end-of-stream@1.4.5 OK for: duplexify@4.1.3 want: ^1.4.1
+157 silly placeDep ROOT stream-shift@1.0.3 OK for: duplexify@4.1.3 want: ^1.0.2
+158 silly fetch manifest once@^1.4.0
+159 timing idealTree:node_modules/duplexify Completed in 9ms
+160 silly placeDep ROOT once@1.4.0 OK for: end-of-stream@1.4.5 want: ^1.4.0
+161 silly fetch manifest wrappy@1
+162 http fetch GET 200 https://registry.npmjs.org/wrappy 9ms (cache hit)
+163 timing idealTree:node_modules/end-of-stream Completed in 12ms
+164 silly placeDep ROOT glob@7.2.3 OK for: help-me@3.0.0 want: ^7.1.6
+165 silly fetch manifest inflight@^1.0.4
+166 silly fetch manifest minimatch@^3.1.1
+167 silly fetch manifest fs.realpath@^1.0.0
+168 silly fetch manifest path-is-absolute@^1.0.0
+169 http fetch GET 200 https://registry.npmjs.org/inflight 148ms (cache miss)
+170 http fetch GET 200 https://registry.npmjs.org/minimatch 149ms (cache miss)
+171 http fetch GET 200 https://registry.npmjs.org/path-is-absolute 151ms (cache miss)
+172 http fetch GET 200 https://registry.npmjs.org/fs.realpath 151ms (cache miss)
+173 timing idealTree:node_modules/help-me Completed in 155ms
+174 silly placeDep ROOT fs.realpath@1.0.0 OK for: glob@7.2.3 want: ^1.0.0
+175 silly placeDep ROOT inflight@1.0.6 OK for: glob@7.2.3 want: ^1.0.4
+176 silly placeDep ROOT minimatch@3.1.2 OK for: glob@7.2.3 want: ^3.1.1
+177 silly placeDep ROOT path-is-absolute@1.0.1 OK for: glob@7.2.3 want: ^1.0.0
+178 silly fetch manifest brace-expansion@^1.1.7
+179 http fetch GET 200 https://registry.npmjs.org/brace-expansion 75ms (cache miss)
+180 timing idealTree:node_modules/glob Completed in 80ms
+181 timing idealTree:node_modules/fs.realpath Completed in 0ms
+182 silly placeDep ROOT wrappy@1.0.2 OK for: inflight@1.0.6 want: 1
+183 timing idealTree:node_modules/inflight Completed in 2ms
+184 timing idealTree:node_modules/inherits Completed in 0ms
+185 timing idealTree:node_modules/leven Completed in 0ms
+186 silly placeDep ROOT yallist@4.0.0 OK for: lru-cache@6.0.0 want: ^4.0.0
+187 timing idealTree:node_modules/lru-cache Completed in 2ms
+188 silly placeDep ROOT brace-expansion@1.1.12 OK for: minimatch@3.1.2 want: ^1.1.7
+189 silly fetch manifest balanced-match@^1.0.0
+190 silly fetch manifest concat-map@0.0.1
+191 http fetch GET 200 https://registry.npmjs.org/balanced-match 79ms (cache miss)
+192 http fetch GET 200 https://registry.npmjs.org/concat-map 96ms (cache miss)
+193 timing idealTree:node_modules/minimatch Completed in 99ms
+194 silly placeDep ROOT balanced-match@1.0.2 OK for: brace-expansion@1.1.12 want: ^1.0.0
+195 silly placeDep ROOT concat-map@0.0.1 OK for: brace-expansion@1.1.12 want: 0.0.1
+196 timing idealTree:node_modules/brace-expansion Completed in 2ms
+197 timing idealTree:node_modules/balanced-match Completed in 0ms
+198 timing idealTree:node_modules/concat-map Completed in 0ms
+199 timing idealTree:node_modules/minimist Completed in 0ms
+200 silly placeDep ROOT bl@4.1.0 OK for: mqtt-packet@6.10.0 want: ^4.0.2
+201 silly placeDep ROOT process-nextick-args@2.0.1 OK for: mqtt-packet@6.10.0 want: ^2.0.1
+202 silly fetch manifest buffer@^5.5.0
+203 http fetch GET 200 https://registry.npmjs.org/buffer 139ms (cache miss)
+204 timing idealTree:node_modules/mqtt-packet Completed in 144ms
+205 silly placeDep ROOT buffer@5.7.1 OK for: bl@4.1.0 want: ^5.5.0
+206 silly fetch manifest base64-js@^1.3.1
+207 silly fetch manifest ieee754@^1.1.13
+208 http fetch GET 200 https://registry.npmjs.org/base64-js 153ms (cache miss)
+209 http fetch GET 200 https://registry.npmjs.org/ieee754 153ms (cache miss)
+210 timing idealTree:node_modules/bl Completed in 157ms
+211 silly placeDep ROOT base64-js@1.5.1 OK for: buffer@5.7.1 want: ^1.3.1
+212 silly placeDep ROOT ieee754@1.2.1 OK for: buffer@5.7.1 want: ^1.1.13
+213 timing idealTree:node_modules/buffer Completed in 2ms
+214 timing idealTree:node_modules/base64-js Completed in 0ms
+215 timing idealTree:node_modules/ieee754 Completed in 0ms
+216 timing idealTree:node_modules/ms Completed in 0ms
+217 silly placeDep ROOT js-sdsl@4.3.0 OK for: number-allocator@1.0.14 want: 4.3.0
+218 timing idealTree:node_modules/number-allocator Completed in 1ms
+219 timing idealTree:node_modules/js-sdsl Completed in 0ms
+220 timing idealTree:node_modules/once Completed in 0ms
+221 timing idealTree:node_modules/path-is-absolute Completed in 0ms
+222 timing idealTree:node_modules/process-nextick-args Completed in 0ms
+223 timing idealTree:node_modules/pump Completed in 0ms
+224 silly placeDep ROOT string_decoder@1.3.0 OK for: readable-stream@3.6.2 want: ^1.1.1
+225 silly placeDep ROOT util-deprecate@1.0.2 OK for: readable-stream@3.6.2 want: ^1.0.1
+226 silly fetch manifest safe-buffer@~5.2.0
+227 http fetch GET 200 https://registry.npmjs.org/safe-buffer 7ms (cache hit)
+228 timing idealTree:node_modules/readable-stream Completed in 11ms
+229 timing idealTree:node_modules/reinterval Completed in 0ms
+230 timing idealTree:node_modules/rfdc Completed in 0ms
+231 timing idealTree:node_modules/split2 Completed in 0ms
+232 timing idealTree:node_modules/stream-shift Completed in 0ms
+233 silly placeDep ROOT safe-buffer@5.2.1 OK for: string_decoder@1.3.0 want: ~5.2.0
+234 timing idealTree:node_modules/string_decoder Completed in 1ms
+235 timing idealTree:node_modules/safe-buffer Completed in 0ms
+236 timing idealTree:node_modules/typedarray Completed in 0ms
+237 timing idealTree:node_modules/util-deprecate Completed in 0ms
+238 timing idealTree:node_modules/wrappy Completed in 0ms
+239 timing idealTree:node_modules/ws Completed in 0ms
+240 timing idealTree:node_modules/xtend Completed in 0ms
+241 timing idealTree:node_modules/yallist Completed in 0ms
+242 timing idealTree:buildDeps Completed in 3969ms
+243 timing idealTree:fixDepFlags Completed in 1ms
+244 timing idealTree Completed in 3979ms
+245 timing reify:loadTrees Completed in 3981ms
+246 timing reify:diffTrees Completed in 2ms
+247 silly reify moves {}
+248 timing reify:retireShallow Completed in 1ms
+249 timing reify:createSparse Completed in 18ms
+250 timing reify:trashOmits Completed in 1ms
+251 timing reify:loadBundles Completed in 0ms
+252 silly tarball no local data for safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz. Extracting by manifest.
+253 silly tarball no local data for js-sdsl@https://registry.npmjs.org/js-sdsl/-/js-sdsl-4.3.0.tgz. Extracting by manifest.
+254 silly tarball no local data for string_decoder@https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz. Extracting by manifest.
+255 silly tarball no local data for base64-js@https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz. Extracting by manifest.
+256 silly tarball no local data for process-nextick-args@https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz. Extracting by manifest.
+257 silly tarball no local data for bl@https://registry.npmjs.org/bl/-/bl-4.1.0.tgz. Extracting by manifest.
+258 silly tarball no local data for balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz. Extracting by manifest.
+259 silly tarball no local data for concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz. Extracting by manifest.
+260 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.12.tgz. Extracting by manifest.
+261 silly tarball no local data for yallist@https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz. Extracting by manifest.
+262 silly tarball no local data for wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz. Extracting by manifest.
+263 silly tarball no local data for path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz. Extracting by manifest.
+264 silly tarball no local data for minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz. Extracting by manifest.
+265 silly tarball no local data for fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz. Extracting by manifest.
+266 silly tarball no local data for inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz. Extracting by manifest.
+267 silly tarball no local data for once@https://registry.npmjs.org/once/-/once-1.4.0.tgz. Extracting by manifest.
+268 silly tarball no local data for glob@https://registry.npmjs.org/glob/-/glob-7.2.3.tgz. Extracting by manifest.
+269 silly tarball no local data for stream-shift@https://registry.npmjs.org/stream-shift/-/stream-shift-1.0.3.tgz. Extracting by manifest.
+270 silly tarball no local data for end-of-stream@https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz. Extracting by manifest.
+271 silly tarball no local data for buffer-from@https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz. Extracting by manifest.
+272 silly tarball no local data for split2@https://registry.npmjs.org/split2/-/split2-3.2.2.tgz. Extracting by manifest.
+273 silly tarball no local data for leven@https://registry.npmjs.org/leven/-/leven-2.1.0.tgz. Extracting by manifest.
+274 silly tarball no local data for ws@https://registry.npmjs.org/ws/-/ws-7.5.10.tgz. Extracting by manifest.
+275 silly tarball no local data for rfdc@https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz. Extracting by manifest.
+276 silly tarball no local data for typedarray@https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz. Extracting by manifest.
+277 silly tarball no local data for readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz. Extracting by manifest.
+278 silly tarball no local data for reinterval@https://registry.npmjs.org/reinterval/-/reinterval-1.1.0.tgz. Extracting by manifest.
+279 silly tarball no local data for xtend@https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz. Extracting by manifest.
+280 silly tarball no local data for mqtt-packet@https://registry.npmjs.org/mqtt-packet/-/mqtt-packet-6.10.0.tgz. Extracting by manifest.
+281 silly tarball no local data for inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz. Extracting by manifest.
+282 silly tarball no local data for pump@https://registry.npmjs.org/pump/-/pump-3.0.3.tgz. Extracting by manifest.
+283 silly tarball no local data for help-me@https://registry.npmjs.org/help-me/-/help-me-3.0.0.tgz. Extracting by manifest.
+284 silly tarball no local data for minimist@https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz. Extracting by manifest.
+285 silly tarball no local data for commist@https://registry.npmjs.org/commist/-/commist-1.1.0.tgz. Extracting by manifest.
+286 silly tarball no local data for number-allocator@https://registry.npmjs.org/number-allocator/-/number-allocator-1.0.14.tgz. Extracting by manifest.
+287 silly tarball no local data for concat-stream@https://registry.npmjs.org/concat-stream/-/concat-stream-2.0.0.tgz. Extracting by manifest.
+288 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz. Extracting by manifest.
+289 silly tarball no local data for duplexify@https://registry.npmjs.org/duplexify/-/duplexify-4.1.3.tgz. Extracting by manifest.
+290 silly tarball no local data for mqtt@https://registry.npmjs.org/mqtt/-/mqtt-4.3.7.tgz. Extracting by manifest.
+291 silly tarball no local data for is-utf8@https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz. Extracting by manifest.
+292 silly tarball no local data for agent-base@https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz. Extracting by manifest.
+293 silly tarball no local data for https-proxy-agent@https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz. Extracting by manifest.
+294 silly tarball no local data for lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz. Extracting by manifest.
+295 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.4.1.tgz. Extracting by manifest.
+296 silly tarball no local data for node-red-iot-mqtt-api@https://registry.npmjs.org/node-red-iot-mqtt-api/-/node-red-iot-mqtt-api-1.0.1.tgz. Extracting by manifest.
+297 silly tarball no local data for util-deprecate@https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz. Extracting by manifest.
+298 silly tarball no local data for buffer@https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz. Extracting by manifest.
+299 silly tarball no local data for ieee754@https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz. Extracting by manifest.
+300 http fetch GET 200 https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz 175ms (cache miss)
+301 timing reifyNode:node_modules/safe-buffer Completed in 194ms
+302 http fetch GET 200 https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz 188ms (cache miss)
+303 timing reifyNode:node_modules/base64-js Completed in 206ms
+304 http fetch GET 200 https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz 191ms (cache miss)
+305 timing reifyNode:node_modules/string_decoder Completed in 210ms
+306 http fetch GET 200 https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz 183ms (cache miss)
+307 timing reifyNode:node_modules/path-is-absolute Completed in 210ms
+308 http fetch GET 200 https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz 183ms (cache miss)
+309 timing reifyNode:node_modules/minimatch Completed in 211ms
+310 http fetch GET 200 https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz 191ms (cache miss)
+311 timing reifyNode:node_modules/balanced-match Completed in 211ms
+312 http fetch GET 200 https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz 184ms (cache miss)
+313 timing reifyNode:node_modules/fs.realpath Completed in 212ms
+314 http fetch GET 200 https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz 184ms (cache miss)
+315 warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+316 timing reifyNode:node_modules/inflight Completed in 212ms
+317 http fetch GET 200 https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz 194ms (cache miss)
+318 timing reifyNode:node_modules/process-nextick-args Completed in 213ms
+319 http fetch GET 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz 188ms (cache miss)
+320 timing reifyNode:node_modules/wrappy Completed in 214ms
+321 http fetch GET 200 https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz 191ms (cache miss)
+322 timing reifyNode:node_modules/concat-map Completed in 215ms
+323 http fetch GET 200 https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 193ms (cache miss)
+324 timing reifyNode:node_modules/yallist Completed in 217ms
+325 http fetch GET 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.12.tgz 193ms (cache miss)
+326 timing reifyNode:node_modules/brace-expansion Completed in 217ms
+327 http fetch GET 200 https://registry.npmjs.org/bl/-/bl-4.1.0.tgz 202ms (cache miss)
+328 timing reifyNode:node_modules/bl Completed in 222ms
+329 http fetch GET 200 https://registry.npmjs.org/once/-/once-1.4.0.tgz 205ms (cache miss)
+330 timing reifyNode:node_modules/once Completed in 235ms
+331 http fetch GET 200 https://registry.npmjs.org/leven/-/leven-2.1.0.tgz 219ms (cache miss)
+332 timing reifyNode:node_modules/leven Completed in 251ms
+333 http fetch GET 200 https://registry.npmjs.org/js-sdsl/-/js-sdsl-4.3.0.tgz 246ms (cache miss)
+334 timing reifyNode:node_modules/js-sdsl Completed in 266ms
+335 http fetch GET 200 https://registry.npmjs.org/glob/-/glob-7.2.3.tgz 237ms (cache miss)
+336 warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+337 timing reifyNode:node_modules/glob Completed in 267ms
+338 http fetch GET 200 https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz 238ms (cache miss)
+339 timing reifyNode:node_modules/end-of-stream Completed in 268ms
+340 http fetch GET 200 https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz 239ms (cache miss)
+341 timing reifyNode:node_modules/buffer-from Completed in 270ms
+342 http fetch GET 200 https://registry.npmjs.org/split2/-/split2-3.2.2.tgz 240ms (cache miss)
+343 timing reifyNode:node_modules/split2 Completed in 271ms
+344 http fetch GET 200 https://registry.npmjs.org/stream-shift/-/stream-shift-1.0.3.tgz 260ms (cache miss)
+345 timing reifyNode:node_modules/stream-shift Completed in 290ms
+346 http fetch GET 200 https://registry.npmjs.org/reinterval/-/reinterval-1.1.0.tgz 265ms (cache miss)
+347 timing reifyNode:node_modules/reinterval Completed in 299ms
+348 http fetch GET 200 https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz 269ms (cache miss)
+349 timing reifyNode:node_modules/typedarray Completed in 303ms
+350 http fetch GET 200 https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz 268ms (cache miss)
+351 timing reifyNode:node_modules/xtend Completed in 306ms
+352 http fetch GET 200 https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz 268ms (cache miss)
+353 timing reifyNode:node_modules/inherits Completed in 305ms
+354 http fetch GET 200 https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz 286ms (cache miss)
+355 timing reifyNode:node_modules/rfdc Completed in 320ms
+356 http fetch GET 200 https://registry.npmjs.org/pump/-/pump-3.0.3.tgz 282ms (cache miss)
+357 timing reifyNode:node_modules/pump Completed in 320ms
+358 http fetch GET 200 https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz 287ms (cache miss)
+359 timing reifyNode:node_modules/readable-stream Completed in 322ms
+360 http fetch GET 200 https://registry.npmjs.org/ws/-/ws-7.5.10.tgz 296ms (cache miss)
+361 timing reifyNode:node_modules/ws Completed in 328ms
+362 http fetch GET 200 https://registry.npmjs.org/mqtt-packet/-/mqtt-packet-6.10.0.tgz 294ms (cache miss)
+363 timing reifyNode:node_modules/mqtt-packet Completed in 331ms
+364 http fetch GET 200 https://registry.npmjs.org/number-allocator/-/number-allocator-1.0.14.tgz 301ms (cache miss)
+365 http fetch GET 200 https://registry.npmjs.org/commist/-/commist-1.1.0.tgz 302ms (cache miss)
+366 timing reifyNode:node_modules/commist Completed in 343ms
+367 timing reifyNode:node_modules/number-allocator Completed in 359ms
+368 http fetch GET 200 https://registry.npmjs.org/concat-stream/-/concat-stream-2.0.0.tgz 323ms (cache miss)
+369 timing reifyNode:node_modules/concat-stream Completed in 364ms
+370 http fetch GET 200 https://registry.npmjs.org/help-me/-/help-me-3.0.0.tgz 328ms (cache miss)
+371 timing reifyNode:node_modules/help-me Completed in 367ms
+372 http fetch GET 200 https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz 334ms (cache miss)
+373 http fetch GET 200 https://registry.npmjs.org/duplexify/-/duplexify-4.1.3.tgz 331ms (cache miss)
+374 timing reifyNode:node_modules/duplexify Completed in 373ms
+375 http fetch GET 200 https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz 329ms (cache miss)
+376 timing reifyNode:node_modules/https-proxy-agent Completed in 373ms
+377 http fetch GET 200 https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz 330ms (cache miss)
+378 timing reifyNode:node_modules/minimist Completed in 374ms
+379 http fetch GET 200 https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz 332ms (cache miss)
+380 timing reifyNode:node_modules/is-utf8 Completed in 375ms
+381 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 335ms (cache miss)
+382 timing reifyNode:node_modules/ms Completed in 375ms
+383 timing reifyNode:node_modules/agent-base Completed in 375ms
+384 http fetch GET 200 https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz 331ms (cache miss)
+385 timing reifyNode:node_modules/lru-cache Completed in 376ms
+386 http fetch GET 200 https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz 341ms (cache miss)
+387 timing reifyNode:node_modules/util-deprecate Completed in 400ms
+388 http fetch GET 200 https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz 382ms (cache miss)
+389 timing reifyNode:node_modules/buffer Completed in 441ms
+390 http fetch GET 200 https://registry.npmjs.org/node-red-iot-mqtt-api/-/node-red-iot-mqtt-api-1.0.1.tgz 398ms (cache miss)
+391 timing reifyNode:node_modules/node-red-iot-mqtt-api Completed in 445ms
+392 http fetch GET 200 https://registry.npmjs.org/mqtt/-/mqtt-4.3.7.tgz 434ms (cache miss)
+393 timing reifyNode:node_modules/mqtt Completed in 477ms
+394 http fetch GET 200 https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz 420ms (cache miss)
+395 timing reifyNode:node_modules/ieee754 Completed in 480ms
+396 http fetch GET 200 https://registry.npmjs.org/debug/-/debug-4.4.1.tgz 435ms (cache miss)
+397 timing reifyNode:node_modules/debug Completed in 480ms
+398 timing reify:unpack Completed in 482ms
+399 timing reify:unretire Completed in 0ms
+400 timing build:queue Completed in 1ms
+401 timing build:link:node_modules/mqtt Completed in 2ms
+402 timing build:link Completed in 2ms
+403 timing build:deps Completed in 3ms
+404 timing build Completed in 3ms
+405 timing reify:build Completed in 4ms
+406 timing reify:trash Completed in 0ms
+407 timing reify:save Completed in 7ms
+408 timing reify Completed in 4500ms
+409 silly ADD node_modules/safe-buffer
+410 silly ADD node_modules/util-deprecate
+411 silly ADD node_modules/string_decoder
+412 silly ADD node_modules/js-sdsl
+413 silly ADD node_modules/ieee754
+414 silly ADD node_modules/base64-js
+415 silly ADD node_modules/buffer
+416 silly ADD node_modules/process-nextick-args
+417 silly ADD node_modules/bl
+418 silly ADD node_modules/concat-map
+419 silly ADD node_modules/balanced-match
+420 silly ADD node_modules/brace-expansion
+421 silly ADD node_modules/yallist
+422 silly ADD node_modules/wrappy
+423 silly ADD node_modules/path-is-absolute
+424 silly ADD node_modules/minimatch
+425 silly ADD node_modules/inflight
+426 silly ADD node_modules/fs.realpath
+427 silly ADD node_modules/glob
+428 silly ADD node_modules/once
+429 silly ADD node_modules/stream-shift
+430 silly ADD node_modules/end-of-stream
+431 silly ADD node_modules/typedarray
+432 silly ADD node_modules/buffer-from
+433 silly ADD node_modules/leven
+434 silly ADD node_modules/xtend
+435 silly ADD node_modules/ws
+436 silly ADD node_modules/split2
+437 silly ADD node_modules/rfdc
+438 silly ADD node_modules/reinterval
+439 silly ADD node_modules/readable-stream
+440 silly ADD node_modules/pump
+441 silly ADD node_modules/number-allocator
+442 silly ADD node_modules/mqtt-packet
+443 silly ADD node_modules/minimist
+444 silly ADD node_modules/lru-cache
+445 silly ADD node_modules/inherits
+446 silly ADD node_modules/help-me
+447 silly ADD node_modules/duplexify
+448 silly ADD node_modules/concat-stream
+449 silly ADD node_modules/commist
+450 silly ADD node_modules/ms
+451 silly ADD node_modules/debug
+452 silly ADD node_modules/agent-base
+453 silly ADD node_modules/mqtt
+454 silly ADD node_modules/is-utf8
+455 silly ADD node_modules/https-proxy-agent
+456 silly ADD node_modules/node-red-iot-mqtt-api
+457 timing command:install Completed in 4506ms
+458 verbose exit 0
+459 timing npm Completed in 4549ms
+460 info ok
