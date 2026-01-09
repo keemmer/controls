@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "93528a9855d09d04",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "4bacb4b98508af55",
         "type": "mqtt-broker",
         "name": "",
@@ -79,7 +87,7 @@
         "type": "debug",
         "z": "9c07c13a2f0deae3",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -230,7 +238,7 @@
         "type": "debug",
         "z": "9c07c13a2f0deae3",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -303,6 +311,73 @@
         "statusType": "auto",
         "x": 680,
         "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2d333c6a740b4661",
+        "type": "http in",
+        "z": "93528a9855d09d04",
+        "name": "",
+        "url": "/getname/:name",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 80,
+        "wires": [
+            [
+                "022230bb546aa712"
+            ]
+        ]
+    },
+    {
+        "id": "022230bb546aa712",
+        "type": "function",
+        "z": "93528a9855d09d04",
+        "name": "function 3",
+        "func": "let name = msg.req.params.name\nmsg.payload.name = name\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 80,
+        "wires": [
+            [
+                "b826be41e56f4d62",
+                "a394a8aef6f3cf51"
+            ]
+        ]
+    },
+    {
+        "id": "b826be41e56f4d62",
+        "type": "debug",
+        "z": "93528a9855d09d04",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a394a8aef6f3cf51",
+        "type": "http response",
+        "z": "93528a9855d09d04",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 840,
+        "y": 120,
         "wires": []
     }
 ]

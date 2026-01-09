@@ -58,6 +58,7 @@ export default function Drawer() {
       groupName: "Settings",
       item: [
         { key: "Device", label: "Device", icon: <MdDevicesOther /> },
+        { key: "Config", label: "Config", icon: <MdDevicesOther /> },
         { key: "Mqtt", label: "Mqtt", icon: <MdConnectedTv />, link: "/mqtt" },
         { key: "User", label: "User", icon: <FaRegUser /> },
       ],
@@ -104,8 +105,13 @@ export default function Drawer() {
               <Link key={item.key} href={item.link || "#"}>
                 <div
                   className={`flex items-center content-center align-center py-2 rounded-md hover:cursor-pointer  transition-all duration-100 ${
-                    expanded ? "sm:px-4 px-3" : "px-3"}
-                  ${active != item.link ? "hover:bg-gray-100 hover:text-gray-500" : ""} 
+                    expanded ? "sm:px-4 px-3" : "px-3"
+                  }
+                  ${
+                    active != item.link
+                      ? "hover:bg-gray-100 hover:text-gray-500"
+                      : ""
+                  } 
                   ${active === item.link ? "bg-indigo-600 text-white" : ""}  `}
                   onClick={() => setActive(item.link || "")}
                 >

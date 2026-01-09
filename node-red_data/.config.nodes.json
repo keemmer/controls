@@ -1,7 +1,7 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "3.1.8",
+        "version": "4.1.0",
         "local": false,
         "user": false,
         "nodes": {
@@ -467,6 +467,27 @@
                 "user": false,
                 "module": "node-red-contrib-influxdb",
                 "file": "/data/node_modules/node-red-contrib-influxdb/influxdb.js"
+            }
+        }
+    },
+    "node-red-node-mongodb": {
+        "name": "node-red-node-mongodb",
+        "version": "0.2.5",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "mongo": {
+                "name": "mongo",
+                "types": [
+                    "mongodb",
+                    "mongodb out",
+                    "mongodb in"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-mongodb",
+                "file": "/data/node_modules/node-red-node-mongodb/66-mongodb.js"
             }
         }
     }
