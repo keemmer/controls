@@ -12,7 +12,7 @@ import { FaFaucet } from "react-icons/fa6";
 import { MdDevicesOther } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { MdConnectedTv } from "react-icons/md";
-
+import { GrConfigure } from "react-icons/gr";
 type MenuItemKey = {
   groupName: string;
   key: string;
@@ -58,7 +58,7 @@ export default function Drawer() {
       groupName: "Settings",
       item: [
         { key: "Device", label: "Device", icon: <MdDevicesOther /> },
-        { key: "Config", label: "Config", icon: <MdDevicesOther /> },
+        { key: "Config", label: "Config", icon: <GrConfigure /> },
         { key: "Mqtt", label: "Mqtt", icon: <MdConnectedTv />, link: "/mqtt" },
         { key: "User", label: "User", icon: <FaRegUser /> },
       ],
