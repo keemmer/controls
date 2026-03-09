@@ -60,7 +60,7 @@ export default function Drawer() {
         { key: "Device", label: "Device", icon: <MdDevicesOther /> },
         { key: "Config", label: "Config", icon: <GrConfigure /> },
         { key: "Mqtt", label: "Mqtt", icon: <MdConnectedTv />, link: "/mqtt" },
-        { key: "User", label: "User", icon: <FaRegUser /> },
+        { key: "User", label: "User", icon: <FaRegUser /> ,link: "/user" },
       ],
     },
   ];
